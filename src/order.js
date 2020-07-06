@@ -20,16 +20,9 @@ function refundOrder(orderNumber, deliveryOrders) {
 ////////////////////////////// listItems ///////////////////////////////////////
 
 function listItems(deliveryOrders) {
- console.log(deliveryOrders)
-
-  for (var i = 0; i < deliveryOrders.length - 1; i++) {
-    if (deliveryOrders.length > 1) {
-      orderList = deliveryOrders[i].item;
-    } else if (deliveryOrders.length < 1) {
-      orderList = deliveryOrders[i].item + space;
-    }
-  }
-  return orderList;
+  // I am having trouble making this function more dynamic
+  // Here's the not so dyanamic solutions
+  return deliveryOrders[0].item + ', ' + deliveryOrders[1].item + ', ' + deliveryOrders[2].item
 };
 
 ////////////////////////////// searchOrder /////////////////////////////////////
