@@ -20,10 +20,15 @@ function refundOrder(orderNumber, deliveryOrders) {
 ////////////////////////////// listItems ///////////////////////////////////////
 
 function listItems(deliveryOrders) {
-  // I am having trouble making this function more dynamic
-  // Here's the not so dyanamic solutions
-  return deliveryOrders[0].item + ', ' + deliveryOrders[1].item + ', ' + deliveryOrders[2].item
+  var orderedList = '';
+  var emptyList = [];
+  for(var i = 0; i < deliveryOrders.length; i++) {
+    emptyList.push(deliveryOrders[i].item);
+    orderedList = emptyList.join(', ');
+  }
+  return orderedList;
 };
+
 
 ////////////////////////////// searchOrder /////////////////////////////////////
 
